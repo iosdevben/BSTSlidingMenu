@@ -1,5 +1,5 @@
 //
-//  BSTMenuViewController.h
+//  BSTSlidingMenuViewController.h
 //
 //  Created by Ben Thomas on 5/04/13.
 //
@@ -61,7 +61,7 @@ static const CGFloat BSTMenuDefaultAnimationDelay = 0.f;
 
 @end
 
-@interface BSTMenuViewController : UIViewController<BSTMenuDelegate>
+@interface BSTSlidingMenuViewController : UIViewController<BSTMenuDelegate>
 
 // the delay to wait before animating the menu opening
 // defaults to BSTMenuDefaultAnimationDelay

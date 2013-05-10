@@ -1,14 +1,14 @@
 //
-//  BSTMenuViewController.m
+//  BSTSlidingMenuViewController.m
 //  Simple Media Player
 //
 //  Created by Ben Thomas on 5/04/13.
 //
 //
 
-#import "BSTMenuViewController.h"
+#import "BSTSlidingMenuViewController.h"
 
-@interface BSTMenuViewController ()
+@interface BSTSlidingMenuViewController ()
 
 - (void)menuButtonTapped;
 
@@ -22,7 +22,7 @@
 
 @end
 
-@implementation BSTMenuViewController
+@implementation BSTSlidingMenuViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,13 +31,13 @@
       self.animationDelay = BSTMenuDefaultAnimationDelay;
       self.animationDuration = BSTMenuDefaultAnimationDuration;
       
-      self.buttonColor = [UIColor whiteColor];
-      self.buttonActiveColor = [UIColor colorWithWhite:.9f alpha:1.f];
-      self.buttonHighlightColor = [UIColor lightGrayColor];
+      self.buttonColor = [UIColor darkGrayColor];
+      self.buttonActiveColor = [UIColor grayColor];
+      self.buttonHighlightColor = [UIColor grayColor];
       
-      self.buttonTextColor = [UIColor blackColor];
+      self.buttonTextColor = [UIColor whiteColor];
       self.buttonActiveTextColor = [UIColor blackColor];
-      self.buttonHighlightTextColor = [UIColor blackColor];
+      self.buttonHighlightTextColor = [UIColor lightGrayColor];
 
       self.buttonTitle = @"X";
 
