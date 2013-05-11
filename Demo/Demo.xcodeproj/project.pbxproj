@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A41AF728173EEEB9004D01B3 /* BSTMenuPinnedRightBottomVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A41AF727173EEEB9004D01B3 /* BSTMenuPinnedRightBottomVC.m */; };
+		A457AEF4173D958800272CEF /* BSTMenuPinnedLeftTopVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A457AEF3173D958800272CEF /* BSTMenuPinnedLeftTopVC.m */; };
+		A457AEF7173D95A900272CEF /* BSTMenuPinnedRightTopVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A457AEF6173D95A900272CEF /* BSTMenuPinnedRightTopVC.m */; };
+		A457AEFA173D98DF00272CEF /* BSTMenuPinnedLeftBottomVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A457AEF9173D98DF00272CEF /* BSTMenuPinnedLeftBottomVC.m */; };
 		A47BF20E173C73A000677C82 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A47BF20D173C73A000677C82 /* UIKit.framework */; };
 		A47BF210173C73A000677C82 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A47BF20F173C73A000677C82 /* Foundation.framework */; };
 		A47BF212173C73A000677C82 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A47BF211173C73A000677C82 /* CoreGraphics.framework */; };
@@ -23,6 +27,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A41AF726173EEEB9004D01B3 /* BSTMenuPinnedRightBottomVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTMenuPinnedRightBottomVC.h; sourceTree = "<group>"; };
+		A41AF727173EEEB9004D01B3 /* BSTMenuPinnedRightBottomVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTMenuPinnedRightBottomVC.m; sourceTree = "<group>"; };
+		A457AEF2173D958800272CEF /* BSTMenuPinnedLeftTopVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTMenuPinnedLeftTopVC.h; sourceTree = "<group>"; };
+		A457AEF3173D958800272CEF /* BSTMenuPinnedLeftTopVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTMenuPinnedLeftTopVC.m; sourceTree = "<group>"; };
+		A457AEF5173D95A900272CEF /* BSTMenuPinnedRightTopVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTMenuPinnedRightTopVC.h; sourceTree = "<group>"; };
+		A457AEF6173D95A900272CEF /* BSTMenuPinnedRightTopVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTMenuPinnedRightTopVC.m; sourceTree = "<group>"; };
+		A457AEF8173D98DF00272CEF /* BSTMenuPinnedLeftBottomVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTMenuPinnedLeftBottomVC.h; sourceTree = "<group>"; };
+		A457AEF9173D98DF00272CEF /* BSTMenuPinnedLeftBottomVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTMenuPinnedLeftBottomVC.m; sourceTree = "<group>"; };
 		A47BF20A173C73A000677C82 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A47BF20D173C73A000677C82 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A47BF20F173C73A000677C82 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -96,9 +108,17 @@
 				A47BF21D173C73A000677C82 /* BSTDemoAppDelegate.m */,
 				A47BF22E173C73D800677C82 /* BSTDemoViewController.h */,
 				A47BF22F173C73D800677C82 /* BSTDemoViewController.m */,
-				A47BF214173C73A000677C82 /* Supporting Files */,
+				A457AEF8173D98DF00272CEF /* BSTMenuPinnedLeftBottomVC.h */,
+				A457AEF9173D98DF00272CEF /* BSTMenuPinnedLeftBottomVC.m */,
+				A41AF726173EEEB9004D01B3 /* BSTMenuPinnedRightBottomVC.h */,
+				A41AF727173EEEB9004D01B3 /* BSTMenuPinnedRightBottomVC.m */,
+				A457AEF2173D958800272CEF /* BSTMenuPinnedLeftTopVC.h */,
+				A457AEF3173D958800272CEF /* BSTMenuPinnedLeftTopVC.m */,
+				A457AEF5173D95A900272CEF /* BSTMenuPinnedRightTopVC.h */,
+				A457AEF6173D95A900272CEF /* BSTMenuPinnedRightTopVC.m */,
 				A47BF231173C74B300677C82 /* BSTSharingMenu.h */,
 				A47BF232173C74B300677C82 /* BSTSharingMenu.m */,
+				A47BF214173C73A000677C82 /* Supporting Files */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -197,6 +217,10 @@
 				A47BF22D173C73BC00677C82 /* BSTSlidingMenuViewController.m in Sources */,
 				A47BF230173C73D800677C82 /* BSTDemoViewController.m in Sources */,
 				A47BF233173C74B300677C82 /* BSTSharingMenu.m in Sources */,
+				A457AEF4173D958800272CEF /* BSTMenuPinnedLeftTopVC.m in Sources */,
+				A457AEF7173D95A900272CEF /* BSTMenuPinnedRightTopVC.m in Sources */,
+				A457AEFA173D98DF00272CEF /* BSTMenuPinnedLeftBottomVC.m in Sources */,
+				A41AF728173EEEB9004D01B3 /* BSTMenuPinnedRightBottomVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +335,7 @@
 				A47BF229173C73A000677C82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

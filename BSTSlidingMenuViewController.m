@@ -39,6 +39,9 @@
       self.buttonActiveTextColor = [UIColor blackColor];
       self.buttonHighlightTextColor = [UIColor lightGrayColor];
 
+      self.buttonTitleInsets = UIEdgeInsetsMake(0, 0, 0, 0);
+      self.buttonTitleFont = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+      
       self.buttonTitle = @"X";
 
       self.closeMenuWhenRowSelected = YES;
@@ -62,7 +65,7 @@
 - (void)loadView
 {
   UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth([UIScreen mainScreen].bounds), CGRectGetHeight([UIScreen mainScreen].bounds))];
-  view.clipsToBounds = YES;
+  view.clipsToBounds = NO;
   
   self.headerView = [[UIView alloc] initWithFrame:view.bounds];
   self.headerView.backgroundColor = self.headerBackgroundColor;
@@ -73,7 +76,8 @@
   [self.button setTitleColor:self.buttonHighlightTextColor forState:UIControlStateHighlighted];
   [self.button setTitle:self.buttonTitle forState:UIControlStateNormal];
   self.button.titleLabel.font = self.buttonTitleFont;
-  self.button.titleEdgeInsets = self.buttonTitleInsets;
+  self.button.contentEdgeInsets = self.buttonTitleInsets;
+  [self.button sizeToFit];
   
   self.menu = [[UIView alloc] initWithFrame:CGRectZero];
   self.menu.backgroundColor = [UIColor whiteColor];
@@ -103,36 +107,47 @@
   CGFloat menuWidth = [self menuWidth];
   CGFloat menuHeight = [self menuHeight];
     
-  CGRect viewRect = self.view.frame;
-  viewRect.size.height = [self buttonSize].height;
-  viewRect.size.width = MAX([self buttonSize].width, menuWidth);
-  self.view.frame = viewRect;
+  CGRect viewFrame = self.view.frame;
+  viewFrame.size.height = [self buttonSize].height;
+  viewFrame.size.width = MAX([self buttonSize].width, menuWidth);
+  self.view.frame = viewFrame;
  
-  CGRect button = self.button.frame;
-  button.size = [self buttonSize];
-  
-//  CGRect viewRect = self.view.bounds;
+  CGRect buttonFrame = self.button.frame;
+  buttonFrame.size = [self buttonSize];
   
   if (self.pinLocation == BSTMenuPinLocationRight)
-    button.origin.x = CGRectGetMaxX(self.view.bounds) - CGRectGetWidth(button);
+    buttonFrame.origin.x = CGRectGetMaxX(self.view.bounds) - CGRectGetWidth(buttonFrame);
   
-  self.button.frame = button;
+  self.button.frame = buttonFrame;
   
-  CGRect header = self.headerView.frame;
-  header.size.width = CGRectGetWidth(viewRect);
-  header.size.height = CGRectGetHeight(button);
-  self.headerView.frame = header;
+  CGRect headerFrame = self.headerView.frame;
+  headerFrame.size.width = CGRectGetWidth(viewFrame);
+  headerFrame.size.height = CGRectGetHeight(buttonFrame);
   
 
-  CGRect menu = self.menu.frame;
-  menu.size = CGSizeMake(menuWidth, menuHeight);
+  CGRect menuFrame = self.menu.frame;
+  menuFrame.size = CGSizeMake(menuWidth, menuHeight);
   if (self.pinLocation == BSTMenuPinLocationRight)
-    menu.origin.x = CGRectGetMaxX(self.button.frame) - CGRectGetWidth(menu);
-  else
-    menu.origin.x = 0;
+  {
+    menuFrame.origin.x = CGRectGetMaxX(self.button.frame) - CGRectGetWidth(menuFrame);
+  }
+  else if (self.pinLocation == BSTMenuPinLocationLeft)
+  {
+    menuFrame.origin.x = 0;
+  }
   
-  menu.origin.y = CGRectGetMaxY(self.button.frame) - CGRectGetHeight(menu);
-  self.menu.frame = menu;
+  if (BSTMenuOpeningDirectionDown == self.openingDirection)
+  {
+    menuFrame.origin.y = CGRectGetMaxY(self.button.frame) - CGRectGetHeight(menuFrame);
+  }
+  else if (BSTMenuOpeningDirectionUp == self.openingDirection)
+  {
+    menuFrame.origin.y = CGRectGetMinY(self.button.frame);
+    headerFrame.origin.y = CGRectGetMinY(self.button.frame);
+  }
+  
+  self.menu.frame = menuFrame;
+  self.headerView.frame = headerFrame;
 
   [self.button addTarget:self action:@selector(menuButtonTapped) forControlEvents:UIControlEventTouchUpInside];
 }
@@ -157,11 +172,9 @@
   if (!self.menu.hidden)
   {
     [self close];
-//    [self.parentViewController.view sendSubviewToBack:self.menu];
   }
   else
   {
-//    [self.parentViewController.view bringSubviewToFront:self.menu];
     [self open];
   }
 }
@@ -170,83 +183,122 @@
 {
   [self.timer invalidate];
   
-  CGRect rect = self.menu.frame;
-  CGRect viewRect = self.view.frame;
+  CGRect menuFrame = self.menu.frame;
+  CGRect menuFrameFinal = self.menu.frame;
+  
+  CGRect buttonFrame = self.button.frame;
+  CGRect headerFrame = self.headerView.frame;
+  CGRect viewFrame = self.view.frame;
   
   switch (self.openingDirection)
   {
     case BSTMenuOpeningDirectionLeft:
     {
-      rect.origin.x = CGRectGetMinX(self.button.frame);
+      menuFrame.origin.x = CGRectGetMinX(self.button.frame);
       break;
     }
     case BSTMenuOpeningDirectionRight:
     {
-      rect.origin.x = CGRectGetMaxX(self.button.frame) - CGRectGetWidth(rect);
+      menuFrame.origin.x = CGRectGetMaxX(self.button.frame) - CGRectGetWidth(menuFrame);
       break;
     }
     case BSTMenuOpeningDirectionUp:
     {
-      rect.origin.y = CGRectGetMinY(self.button.frame);
-      viewRect.size.height = [self buttonSize].height;
+      menuFrame = self.menu.frame;
+      menuFrame.origin.y = CGRectGetMinY(buttonFrame);
+      
+      menuFrameFinal.origin.y = 0;
+
+      viewFrame.origin.y += CGRectGetHeight(menuFrame);
+      viewFrame.size.height = [self buttonSize].height;
+
+      buttonFrame = self.button.frame;
+      buttonFrame.origin.y = 0;
+      
+      headerFrame.origin.y = buttonFrame.origin.y;
+
       break;
     }
     case BSTMenuOpeningDirectionDown:
     default:
     {
-      viewRect.size.height = [self buttonSize].height;
-      rect.origin.y = [self buttonSize].height - [self menuHeight];
+      viewFrame.size.height = [self buttonSize].height;
+      menuFrame.origin.y = [self buttonSize].height - [self menuHeight];
+      menuFrameFinal = menuFrame;
       break;
     }
   }
 
   [UIView animateWithDuration:self.animationDuration delay:self.animationDelay options:UIViewAnimationOptionCurveEaseInOut animations:^{
-    self.menu.frame = rect;
+    self.menu.frame = menuFrame;
     self.button.backgroundColor = self.buttonColor;
     [self.button setTitleColor:self.buttonTextColor forState:UIControlStateNormal];
   } completion:^(BOOL finished) {
     self.menu.hidden = YES;
-    self.view.frame = viewRect;
+    self.view.frame = viewFrame;
+    self.button.frame = buttonFrame;
+    self.headerView.frame = headerFrame;
+    self.menu.frame = menuFrameFinal;
   }];
 }
 
 - (void)open
 {
-  CGRect rect = self.menu.frame;
-  CGRect viewRect = self.view.frame;
-
+  CGRect menuFrame = self.menu.frame;
+  CGRect menuFrameFinal = menuFrame;
+  
+  CGRect viewFrame = self.view.frame;
+  CGRect buttonFrame = self.button.frame;
+  
+  CGRect headerFrame = self.headerView.frame;
+  
   switch (self.openingDirection)
   {
     case BSTMenuOpeningDirectionLeft:
     {
-      rect.origin.x = CGRectGetMinX(self.button.frame) - CGRectGetWidth(rect);
+      menuFrame.origin.x = CGRectGetMinX(self.button.frame) - CGRectGetWidth(menuFrame);
       break;
     }
     case BSTMenuOpeningDirectionRight:
     {
-      rect.origin.x = CGRectGetMaxX(self.button.frame);
+      menuFrame.origin.x = CGRectGetMaxX(self.button.frame);
       break;
     }
     case BSTMenuOpeningDirectionUp:
     {
-      rect.origin.y = CGRectGetMinY(self.button.frame) - CGRectGetHeight(rect);
-      viewRect.size.height = [self buttonSize].height + [self menuHeight];
+      viewFrame.origin.y -= CGRectGetHeight(menuFrame);
+      viewFrame.size.height = [self buttonSize].height + CGRectGetHeight(menuFrame);
+      self.view.frame = viewFrame;
+      
+      menuFrameFinal = self.menu.frame;
+      menuFrameFinal.origin.y = 0;
+      
+      menuFrame.origin.y = CGRectGetMaxY(viewFrame) - CGRectGetHeight(buttonFrame);
+      self.menu.frame = menuFrame;
+      
+      buttonFrame.origin.y = CGRectGetHeight(menuFrame);
+      
+      headerFrame.origin.y = buttonFrame.origin.y;
+      
       break;
     }
     case BSTMenuOpeningDirectionDown:
     default:
     {
-      rect.origin.y = CGRectGetMaxY(self.button.bounds);
-      viewRect.size.height = [self buttonSize].height + [self menuHeight];
+      viewFrame.size.height = [self buttonSize].height + [self menuHeight];
+      self.view.frame = viewFrame;
+      menuFrameFinal = self.menu.frame;
+      menuFrameFinal.origin.y = CGRectGetMaxY(self.button.bounds);
       break;
     }
   }
-  
 
   self.menu.hidden = NO;
-  self.view.frame = viewRect;
+  self.button.frame = buttonFrame;
+  self.headerView.frame = headerFrame;
+  
   [UIView animateWithDuration:self.animationDuration delay:self.animationDelay options:UIViewAnimationOptionCurveEaseInOut animations:^{
-    self.menu.frame = rect;
+    self.menu.frame = menuFrameFinal;
     self.button.backgroundColor = self.buttonActiveColor;
     [self.button setTitleColor:self.buttonActiveTextColor forState:UIControlStateNormal];
   } completion:^(BOOL finished) {
@@ -283,7 +335,7 @@
 
 - (CGSize)buttonSize
 {
-  return CGSizeMake(44, 44);
+  return CGSizeMake(CGRectGetWidth(self.button.frame), 44);
 }
 
 - (NSInteger)menuWidth

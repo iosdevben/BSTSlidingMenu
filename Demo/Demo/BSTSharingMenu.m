@@ -24,7 +24,7 @@
 @implementation BSTSharingMenu
 
 static const NSInteger kButtonWidth = 50;
-static const NSInteger kButtonHeight = 50;
+static const NSInteger kButtonHeight = 44;
 static const NSInteger kRowHeight = 40;
 static const NSInteger kMenuPadding = 10.f;
 
@@ -34,6 +34,7 @@ static const NSInteger kMenuPadding = 10.f;
   if (self) {
     // configure the menu button
     self.buttonTitle = @"Share";
+    self.buttonTitleInsets = UIEdgeInsetsMake(0, 10, 0, 10);
     
     self.headerBackgroundColor = [UIColor darkGrayColor];
 
@@ -50,10 +51,6 @@ static const NSInteger kMenuPadding = 10.f;
 {
   [super viewDidLoad];
 
-  CGRect rect = self.view.frame;
-  rect.origin.x = kMenuPadding;
-  self.view.frame = rect;
-  
   [self.label1 addGestureRecognizer:self.label1TapRecognizer];
   [self.label2 addGestureRecognizer:self.label2TapRecognizer];
   [self.label3 addGestureRecognizer:self.label3TapRecognizer];
@@ -69,9 +66,10 @@ static const NSInteger kMenuPadding = 10.f;
 
 // return the size of the menu button
 // defaults to 44 x 44
+// here I'm just overriding the height but I could override the width if desired
 - (CGSize)buttonSize
 {
-  return CGSizeMake(kButtonWidth, kButtonHeight);
+  return CGSizeMake([super buttonSize].width, kButtonHeight);
 }
 
 // return the width of the menu
