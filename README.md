@@ -9,11 +9,12 @@ The slide-out menu can be configured to be pinned to the left or right side of t
 
 The menu can optionally be configured to be close automatically after a given period of time.
 
+<img src="https://raw.github.com/jessedc/BSTSlidingMenu/jcmm-changes/BSTSScreenshot.png" alt="BSTSSliding Menu Demo" width="749" />
+
 *Used in apps:*
 
 &nbsp;&nbsp;http://appstore.com/HarkenForiPhone
 
-<img src="https://github.com/jessedc/BSTSlidingMenu/raw/master/BSTSScreenshot.png" alt="BSTSSliding Menu Demo" width="749" />
 
 Usage
 -----
