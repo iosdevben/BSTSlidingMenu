@@ -43,7 +43,17 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  self.view.backgroundColor = [UIColor darkGrayColor];
+  self.view.backgroundColor = [UIColor colorWithRed:.08f green:.11f blue:.20f alpha:1.f];
+  
+  UILabel *title = [[UILabel alloc] initWithFrame:self.view.bounds];
+  title.text = @"BSTSlidingMenu";
+  title.font = [UIFont fontWithName:@"AmericanTypewriter-Light" size:30.f];
+  title.textAlignment = NSTextAlignmentCenter;
+  title.backgroundColor = [UIColor clearColor];
+  title.textColor = [UIColor colorWithRed:1.f green:.97f blue:.98f alpha:1.f];
+  title.shadowColor = [UIColor blackColor];
+  title.shadowOffset = CGSizeMake(0, -1);
+  [self.view addSubview:title];
   
   [self.view addSubview:self.leftBottomVC.view];
   [self.view addSubview:self.leftTopVC.view];
