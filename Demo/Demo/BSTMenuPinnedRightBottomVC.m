@@ -21,6 +21,7 @@
     // Custom initialization
     self.pinLocation = BSTSlidingMenuPinLocationRight;
     self.openingDirection = BSTSlidingMenuOpeningDirectionUp;
+    self.timerLength = 0;
   }
   return self;
 }

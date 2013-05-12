@@ -45,7 +45,7 @@ static const NSInteger kMenuPadding = 10.f;
     self.label2TapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(twitterTapped)];
     self.label3TapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(weiboTapped)];
     
-    self.timerLength = 0;
+    self.timerLength = 2;
   }
   return self;
 }

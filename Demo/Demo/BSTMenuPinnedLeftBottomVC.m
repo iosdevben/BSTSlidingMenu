@@ -20,6 +20,7 @@
   if (self) {
     // Custom initialization
     self.openingDirection = BSTSlidingMenuOpeningDirectionUp;
+    self.timerLength = 0;
   }
   return self;
 }
