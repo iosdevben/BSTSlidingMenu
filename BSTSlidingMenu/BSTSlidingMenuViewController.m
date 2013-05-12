@@ -112,7 +112,7 @@
   CGRect buttonFrame = self.button.frame;
   buttonFrame.size = [self buttonSize];
   
-  if (self.pinLocation == BSTMenuPinLocationRight)
+  if (self.pinLocation == BSTSlidingMenuPinLocationRight)
   {
     buttonFrame.origin.x = CGRectGetMaxX(self.view.bounds) - CGRectGetWidth(buttonFrame);
   }

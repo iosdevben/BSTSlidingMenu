@@ -10,31 +10,31 @@
  *  direction to down.
  *
  */
-typedef NS_ENUM(NSInteger, BSTMenuOpeningDirection) {
-  BSTMenuOpeningDirectionDown = 0,
-  BSTMenuOpeningDirectionUp = 1,
-  BSTMenuOpeningDirectionLeft = 2,
-  BSTMenuOpeningDirectionRight = 3
+typedef NS_ENUM(NSInteger, BSTSlidingMenuOpeningDirection) {
+  BSTSlidingMenuOpeningDirectionDown = 0,
+  BSTSlidingMenuOpeningDirectionUp = 1,
+  BSTSlidingMenuOpeningDirectionLeft = 2,
+  BSTSlidingMenuOpeningDirectionRight = 3
 };
 
 /** The alignment of menu to the button.
  *  If your button is in the top-left corner of the screen,
  *  and you want the left side of the menu to be aligned with the
- *  left side of the button, use BSTMenuPintLocationLeft.
+ *  left side of the button, use BSTSlidingMenuPintLocationLeft.
  *
  */
-typedef NS_ENUM(NSInteger, BSTMenuPinLocation) {
-  BSTMenuPinLocationLeft = 0,
-  BSTMenuPinLocationRight = 1,
-  BSTMenuPinLocationTop = 2,
-  BSTMenuPinLocationBottom = 3,
-  BSTMenuPinLocationMiddle = 4
+typedef NS_ENUM(NSInteger, BSTSlidingMenuPinLocation) {
+  BSTSlidingMenuPinLocationLeft = 0,
+  BSTSlidingMenuPinLocationRight = 1,
+  BSTSlidingMenuPinLocationTop = 2,
+  BSTSlidingMenuPinLocationBottom = 3,
+  BSTSlidingMenuPinLocationMiddle = 4
 };
 
-static const CGFloat BSTMenuDefaultAnimationDuration = 0.2f;
-static const CGFloat BSTMenuDefaultAnimationDelay = 0.f;
+static const CGFloat BSTSlidingMenuDefaultAnimationDuration = 0.2f;
+static const CGFloat BSTSlidingMenuDefaultAnimationDelay = 0.f;
 
-@protocol BSTMenuDelegate
+@protocol BSTSlidingMenuDelegate
 
 
 /** Returns the number of rows in the menu
@@ -87,15 +87,15 @@ static const CGFloat BSTMenuDefaultAnimationDelay = 0.f;
 
 @end
 
-@interface BSTSlidingMenuViewController : UIViewController<BSTMenuDelegate>
+@interface BSTSlidingMenuViewController : UIViewController<BSTSlidingMenuDelegate>
 
 /** The delay to wait before animating the menu opening
- *  default value is BSTMenuDefaultAnimationDelay
+ *  default value is BSTSlidingMenuDefaultAnimationDelay
  */
 @property (nonatomic, assign) CGFloat animationDelay;
 
 /** The duration to animate the menu opening
- *  default value is BSTMenuDefaultAnimationDuration
+ *  default value is BSTSlidingMenuDefaultAnimationDuration
  */
 @property (nonatomic, assign) CGFloat animationDuration;
 
@@ -141,14 +141,14 @@ static const CGFloat BSTMenuDefaultAnimationDelay = 0.f;
 @property (nonatomic, strong) UIColor *headerBackgroundColor;
 
 /** The direction to open the menu
- *  default value is BSTMenuOpeningDirectionDown
+ *  default value is BSTSlidingMenuOpeningDirectionDown
  */
-@property (nonatomic, assign) BSTMenuOpeningDirection openingDirection;
+@property (nonatomic, assign) BSTSlidingMenuOpeningDirection openingDirection;
 
 /** How the button and menu are aligned
- *  defaults to BSTMenuPinLocationLeft
+ *  defaults to BSTSlidingMenuPinLocationLeft
  */
-@property (nonatomic, assign) BSTMenuPinLocation pinLocation;
+@property (nonatomic, assign) BSTSlidingMenuPinLocation pinLocation;
 
 /** The menu will close after the period specified by timerLength if it's greater than 0
  *  default value is 0
