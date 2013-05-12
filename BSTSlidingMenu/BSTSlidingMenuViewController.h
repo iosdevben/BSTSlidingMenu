@@ -4,7 +4,6 @@
 //  Created by Ben Thomas on 5/04/13.
 //
 
-#import <UIKit/UIKit.h>
 
 // The direction that the menu will slide when it opens. If your
 // button is at the top of the screen, then you should set the opening
@@ -35,7 +34,6 @@ static const CGFloat BSTMenuDefaultAnimationDelay = 0.f;
 
 @protocol BSTMenuDelegate
 
-@required
 // return the number of rows in the menu
 - (NSInteger)numberOfRowsInMenu;
 
@@ -53,10 +51,11 @@ static const CGFloat BSTMenuDefaultAnimationDelay = 0.f;
 // the height of the row at the given index
 - (CGFloat)heightForRowAtIndex:(NSInteger) index;
 
+@optional
+
 // By default, this closes the menu if closeMenuWhenRowSelected is set to YES
 // and restarts the autoClose timer otherwise
 // Make sure you call this if you want to do other stuff when a menu item is selected
-@optional
 - (void)didSelectRowAtIndex:(NSInteger) index;
 
 @end
