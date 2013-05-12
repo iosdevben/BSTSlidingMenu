@@ -37,7 +37,7 @@ BSTSlidingMenu is provided open source with no warranty and no guarantee of supp
 
 
 
-### Licence
+Licence
 -------
 
 The code is copyright (c) 2013, Ben Thomas
