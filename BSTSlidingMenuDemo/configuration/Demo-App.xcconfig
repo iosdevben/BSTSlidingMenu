@@ -1,6 +1,6 @@
 
-GCC_PREFIX_HEADER = src/BSTSSlidingMenuDemo-Prefix.pch
-INFOPLIST_FILE = resources/BSTSSlidingMenuDemo-Info.plist
+GCC_PREFIX_HEADER = src/BSTSlidingMenuDemo-Prefix.pch
+INFOPLIST_FILE = resources/BSTSlidingMenuDemo-Info.plist
 
 PRODUCT_NAME = $(TARGET_NAME)
 PRODUCT_DISPLAY_NAME = $(PRODUCT_NAME)
