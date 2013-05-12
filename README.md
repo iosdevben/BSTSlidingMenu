@@ -13,6 +13,14 @@ The menu can optionally be configured to be close automatically after a given pe
 
 &nbsp;&nbsp;http://appstore.com/HarkenForiPhone
 
+Screenshots
+-----------
+|iphone_demo_1| |iphone_demo_2|
+
+.. |iphone_demo_1| image:: screenshots/1.png
+.. |iphone_demo_2| image:: screenshots/2.png
+
+
 Usage
 -----
 
