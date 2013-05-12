@@ -59,7 +59,7 @@ static const NSInteger kMenuPadding = 10.f;
   [self.label3 addGestureRecognizer:self.label3TapRecognizer];
 }
 
-#pragma mark - BSTMenuDelegate methods
+#pragma mark - BSTSlidingMenuDelegate methods
 
 // return the number of rows in the menu
 - (NSInteger)numberOfRowsInMenu

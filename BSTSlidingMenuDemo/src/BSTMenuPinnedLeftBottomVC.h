@@ -1,5 +1,5 @@
 //
-//  BSTMenuLeftBottomVC.h
+//  BSTSlidingMenuLeftBottomVC.h
 //  Demo
 //
 //  Created by Ben Thomas on 11/05/13.

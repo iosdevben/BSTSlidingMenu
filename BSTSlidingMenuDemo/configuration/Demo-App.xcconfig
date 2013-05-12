@@ -7,4 +7,4 @@ PRODUCT_DISPLAY_NAME = $(PRODUCT_NAME)
 
 //WARNING_CFLAGS = $(inherited) -Wno-unused-parameter
 
-BUNDLE_IDENTIFIER = com.bstsslidingmenu.demoapp
+BUNDLE_IDENTIFIER = com.bstslidingmenu.demoapp
