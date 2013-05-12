@@ -1,25 +1,24 @@
-# Xcode Noise
-build/
-dist/
-.idea/
-*.pbxuser
-*.perspective
-*.perspectivev3
+# xcode noise
 *.mode1v3
 *.mode2v3
-*.xcuserdatad
-*.trace
-*project.xcworkspace/
-*.log
+*.pbxuser
+*.perspective 
+*.perspectivev3
+*.pyc 
+*~.nib/
+build/*
 
-# OSX Noise
+*.xcuserdatad/
+*/xcuserdata/*
+*.xcworkspace/xcuserdata/*
+*.xcodeproj/project.xcworkspace/xcuserdata/*
+
+# old skool
+.svn
+
+# osx noise
 .DS_Store
-
-# Git Noise
-*.orig
-*.BACKUP.*
-*.REMOTE.*
-*.LOCAL.*
-*.BASE.*
-
-*test-reports*
+._*
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes

@@ -10,8 +10,6 @@
 
 @interface BSTSlidingMenuViewController ()
 
-- (void)menuButtonTapped;
-
 @property (nonatomic, strong) UIButton *button;
 @property (nonatomic, strong) UIView *headerView;
 @property (nonatomic, strong) UIView *menu;
@@ -102,8 +100,7 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  
-  
+
   CGFloat menuWidth = [self menuWidth];
   CGFloat menuHeight = [self menuHeight];
     
@@ -115,8 +112,10 @@
   CGRect buttonFrame = self.button.frame;
   buttonFrame.size = [self buttonSize];
   
-  if (self.pinLocation == BSTSlidingMenuPinLocationRight)
+  if (self.pinLocation == BSTMenuPinLocationRight)
+  {
     buttonFrame.origin.x = CGRectGetMaxX(self.view.bounds) - CGRectGetWidth(buttonFrame);
+  }
   
   self.button.frame = buttonFrame;
   
@@ -156,8 +155,9 @@
 {
   NSArray *rows = self.menu.subviews;
   UIView *previous = nil;
-  for (int rowIndex = 0; rowIndex < [self.delegate numberOfRowsInMenu]; ++rowIndex) {
-    UIView *row = [rows objectAtIndex:rowIndex];
+  for (NSInteger rowIndex = 0; rowIndex < [self.delegate numberOfRowsInMenu]; ++rowIndex)
+  {
+    UIView *row = [rows objectAtIndex:(NSUInteger)rowIndex];
 
     CGRect rowRect = row.frame;
     rowRect.origin.y = nil != previous ? CGRectGetMaxY(previous.frame) : 0;
@@ -234,6 +234,7 @@
     self.button.backgroundColor = self.buttonColor;
     [self.button setTitleColor:self.buttonTextColor forState:UIControlStateNormal];
   } completion:^(BOOL finished) {
+#pragma unused(finished)
     self.menu.hidden = YES;
     self.view.frame = viewFrame;
     self.button.frame = buttonFrame;
@@ -302,6 +303,7 @@
     self.button.backgroundColor = self.buttonActiveColor;
     [self.button setTitleColor:self.buttonActiveTextColor forState:UIControlStateNormal];
   } completion:^(BOOL finished) {
+#pragma unused(finished)
     [self startTimer];
   }];
 }
@@ -353,15 +355,21 @@
 
 - (CGFloat)heightForRowAtIndex:(NSInteger)index
 {
-  return 44;
+#pragma unused(index)
+  return 44.f;
 }
 
 - (void)didSelectRowAtIndex:(NSInteger)index
 {
+#pragma unused(index)
   if (self.closeMenuWhenRowSelected)
+  {
     [self close];
+  }
   else
+  {
     [self startTimer];
+  }
 }
 
 @end

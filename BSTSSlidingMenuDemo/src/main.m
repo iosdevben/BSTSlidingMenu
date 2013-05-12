@@ -6,7 +6,6 @@
 //  Copyright (c) 2013 Ben Thomas. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 
 #import "BSTDemoAppDelegate.h"
 

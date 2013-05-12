@@ -79,7 +79,7 @@ static const NSInteger kMenuPadding = 10.f;
 // defaults to 100
 - (NSInteger)menuWidth
 {
-  return CGRectGetWidth(self.label1.frame) + 2 * kMenuPadding;
+  return (NSInteger) floorf(CGRectGetWidth(self.label1.frame) + 2.f * kMenuPadding);
 }
 
 // provide a view containing the row at the given index
