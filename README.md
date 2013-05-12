@@ -13,6 +13,8 @@ The menu can optionally be configured to be close automatically after a given pe
 
 &nbsp;&nbsp;http://appstore.com/HarkenForiPhone
 
+<img src="https://github.com/jessedc/BSTSlidingMenu/raw/master/BSTSScreenshot.png" alt="BSTSSliding Menu Demo" width="749" />
+
 Usage
 -----
 
