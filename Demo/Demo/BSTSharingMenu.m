@@ -33,16 +33,19 @@ static const NSInteger kMenuPadding = 10.f;
   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
   if (self) {
     // configure the menu button
+    self.buttonTextColor = [UIColor colorWithRed:.9f green:.88f blue:.82f alpha:1.f];
     self.buttonTitle = @"Share";
     self.buttonTitleInsets = UIEdgeInsetsMake(0, 10, 0, 10);
-    
-    self.headerBackgroundColor = [UIColor darkGrayColor];
+    self.buttonColor = [UIColor colorWithRed:.08f green:.11f blue:.20f alpha:1.f];
+    self.buttonActiveColor = [UIColor colorWithRed:.21f green:.33f blue:.68f alpha:1.f];
+    self.buttonActiveTextColor = [UIColor colorWithRed:1.f green:.97f blue:.98f alpha:1.f];
+    self.headerBackgroundColor = [UIColor colorWithRed:.08f green:.11f blue:.20f alpha:1.f];
 
     self.label1TapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(facebookTapped)];
     self.label2TapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(twitterTapped)];
     self.label3TapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(weiboTapped)];
     
-    self.timerLength = 2;
+    self.timerLength = 0;
   }
   return self;
 }
