@@ -7,7 +7,7 @@ Currently supports buttons being placed at the top or bottom of a view.
 
 The slide-out menu can be configured to be pinned to the left or right side of the button.
 
-The menu can optionally be configured to be close automatically after a given period of time.
+The menu can optionally be configured to close automatically after a given period of time.
 
 *Used in apps:*
 
