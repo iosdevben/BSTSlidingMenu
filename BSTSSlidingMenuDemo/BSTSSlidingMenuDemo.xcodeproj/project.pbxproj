@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8867DB11173F29010055C4C4 /* BSTSlidingMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8867DB10173F29010055C4C4 /* BSTSlidingMenuViewController.m */; };
+		8867DB16173F29BC0055C4C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8867DB15173F29BC0055C4C4 /* main.m */; };
 		A41AF728173EEEB9004D01B3 /* BSTMenuPinnedRightBottomVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A41AF727173EEEB9004D01B3 /* BSTMenuPinnedRightBottomVC.m */; };
 		A457AEF4173D958800272CEF /* BSTMenuPinnedLeftTopVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A457AEF3173D958800272CEF /* BSTMenuPinnedLeftTopVC.m */; };
 		A457AEF7173D95A900272CEF /* BSTMenuPinnedRightTopVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A457AEF6173D95A900272CEF /* BSTMenuPinnedRightTopVC.m */; };
@@ -15,18 +17,20 @@
 		A47BF210173C73A000677C82 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A47BF20F173C73A000677C82 /* Foundation.framework */; };
 		A47BF212173C73A000677C82 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A47BF211173C73A000677C82 /* CoreGraphics.framework */; };
 		A47BF218173C73A000677C82 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A47BF216173C73A000677C82 /* InfoPlist.strings */; };
-		A47BF21A173C73A000677C82 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A47BF219173C73A000677C82 /* main.m */; };
 		A47BF21E173C73A000677C82 /* BSTDemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A47BF21D173C73A000677C82 /* BSTDemoAppDelegate.m */; };
 		A47BF220173C73A000677C82 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A47BF21F173C73A000677C82 /* Default.png */; };
 		A47BF222173C73A000677C82 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A47BF221173C73A000677C82 /* Default@2x.png */; };
 		A47BF224173C73A000677C82 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A47BF223173C73A000677C82 /* Default-568h@2x.png */; };
-		A47BF22D173C73BC00677C82 /* BSTSlidingMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A47BF22C173C73BC00677C82 /* BSTSlidingMenuViewController.m */; };
 		A47BF230173C73D800677C82 /* BSTDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A47BF22F173C73D800677C82 /* BSTDemoViewController.m */; };
 		A47BF233173C74B300677C82 /* BSTSharingMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = A47BF232173C74B300677C82 /* BSTSharingMenu.m */; };
 		A47BF235173C81F000677C82 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A47BF234173C81F000677C82 /* Social.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8867DB0F173F29010055C4C4 /* BSTSlidingMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTSlidingMenuViewController.h; sourceTree = "<group>"; };
+		8867DB10173F29010055C4C4 /* BSTSlidingMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTSlidingMenuViewController.m; sourceTree = "<group>"; };
+		8867DB14173F29BC0055C4C4 /* BSTSSlidingMenuDemo-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BSTSSlidingMenuDemo-Prefix.pch"; sourceTree = "<group>"; };
+		8867DB15173F29BC0055C4C4 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A41AF726173EEEB9004D01B3 /* BSTMenuPinnedRightBottomVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTMenuPinnedRightBottomVC.h; sourceTree = "<group>"; };
 		A41AF727173EEEB9004D01B3 /* BSTMenuPinnedRightBottomVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTMenuPinnedRightBottomVC.m; sourceTree = "<group>"; };
 		A457AEF2173D958800272CEF /* BSTMenuPinnedLeftTopVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTMenuPinnedLeftTopVC.h; sourceTree = "<group>"; };
@@ -35,21 +39,17 @@
 		A457AEF6173D95A900272CEF /* BSTMenuPinnedRightTopVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTMenuPinnedRightTopVC.m; sourceTree = "<group>"; };
 		A457AEF8173D98DF00272CEF /* BSTMenuPinnedLeftBottomVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTMenuPinnedLeftBottomVC.h; sourceTree = "<group>"; };
 		A457AEF9173D98DF00272CEF /* BSTMenuPinnedLeftBottomVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTMenuPinnedLeftBottomVC.m; sourceTree = "<group>"; };
-		A47BF20A173C73A000677C82 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A47BF20A173C73A000677C82 /* BSTSSlidingMenuDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BSTSSlidingMenuDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A47BF20D173C73A000677C82 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A47BF20F173C73A000677C82 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A47BF211173C73A000677C82 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		A47BF215173C73A000677C82 /* Demo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Demo-Info.plist"; sourceTree = "<group>"; };
 		A47BF217173C73A000677C82 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		A47BF219173C73A000677C82 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A47BF21B173C73A000677C82 /* Demo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Demo-Prefix.pch"; sourceTree = "<group>"; };
 		A47BF21C173C73A000677C82 /* BSTDemoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSTDemoAppDelegate.h; sourceTree = "<group>"; };
 		A47BF21D173C73A000677C82 /* BSTDemoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSTDemoAppDelegate.m; sourceTree = "<group>"; };
 		A47BF21F173C73A000677C82 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		A47BF221173C73A000677C82 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		A47BF223173C73A000677C82 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		A47BF22B173C73BC00677C82 /* BSTSlidingMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BSTSlidingMenuViewController.h; path = ../BSTSlidingMenuViewController.h; sourceTree = "<group>"; };
-		A47BF22C173C73BC00677C82 /* BSTSlidingMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BSTSlidingMenuViewController.m; path = ../BSTSlidingMenuViewController.m; sourceTree = "<group>"; };
 		A47BF22E173C73D800677C82 /* BSTDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTDemoViewController.h; sourceTree = "<group>"; };
 		A47BF22F173C73D800677C82 /* BSTDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTDemoViewController.m; sourceTree = "<group>"; };
 		A47BF231173C74B300677C82 /* BSTSharingMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTSharingMenu.h; sourceTree = "<group>"; };
@@ -72,20 +72,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8867DB12173F29680055C4C4 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Configuration;
+			path = configuration;
+			sourceTree = "<group>";
+		};
+		8867DB13173F29890055C4C4 /* BSTSSlidingMenuDemo */ = {
+			isa = PBXGroup;
+			children = (
+				A47BF213173C73A000677C82 /* Source */,
+				A47BF214173C73A000677C82 /* Resources */,
+				8867DB12173F29680055C4C4 /* Configuration */,
+				A47BF20B173C73A000677C82 /* Products */,
+				A47BF20C173C73A000677C82 /* Frameworks */,
+			);
+			name = BSTSSlidingMenuDemo;
+			sourceTree = "<group>";
+		};
 		A47BF201173C73A000677C82 = {
 			isa = PBXGroup;
 			children = (
-				A47BF22A173C73B000677C82 /* lib */,
-				A47BF213173C73A000677C82 /* Demo */,
-				A47BF20C173C73A000677C82 /* Frameworks */,
-				A47BF20B173C73A000677C82 /* Products */,
+				A47BF22A173C73B000677C82 /* BSTSSlidingMenu */,
+				8867DB13173F29890055C4C4 /* BSTSSlidingMenuDemo */,
 			);
 			sourceTree = "<group>";
 		};
 		A47BF20B173C73A000677C82 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A47BF20A173C73A000677C82 /* Demo.app */,
+				A47BF20A173C73A000677C82 /* BSTSSlidingMenuDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,9 +119,11 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A47BF213173C73A000677C82 /* Demo */ = {
+		A47BF213173C73A000677C82 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				8867DB14173F29BC0055C4C4 /* BSTSSlidingMenuDemo-Prefix.pch */,
+				8867DB15173F29BC0055C4C4 /* main.m */,
 				A47BF21C173C73A000677C82 /* BSTDemoAppDelegate.h */,
 				A47BF21D173C73A000677C82 /* BSTDemoAppDelegate.m */,
 				A47BF22E173C73D800677C82 /* BSTDemoViewController.h */,
@@ -118,40 +138,40 @@
 				A457AEF6173D95A900272CEF /* BSTMenuPinnedRightTopVC.m */,
 				A47BF231173C74B300677C82 /* BSTSharingMenu.h */,
 				A47BF232173C74B300677C82 /* BSTSharingMenu.m */,
-				A47BF214173C73A000677C82 /* Supporting Files */,
 			);
-			path = Demo;
+			name = Source;
+			path = src;
 			sourceTree = "<group>";
 		};
-		A47BF214173C73A000677C82 /* Supporting Files */ = {
+		A47BF214173C73A000677C82 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				A47BF215173C73A000677C82 /* Demo-Info.plist */,
 				A47BF216173C73A000677C82 /* InfoPlist.strings */,
-				A47BF219173C73A000677C82 /* main.m */,
-				A47BF21B173C73A000677C82 /* Demo-Prefix.pch */,
 				A47BF21F173C73A000677C82 /* Default.png */,
 				A47BF221173C73A000677C82 /* Default@2x.png */,
 				A47BF223173C73A000677C82 /* Default-568h@2x.png */,
 			);
-			name = "Supporting Files";
+			name = Resources;
+			path = resources;
 			sourceTree = "<group>";
 		};
-		A47BF22A173C73B000677C82 /* lib */ = {
+		A47BF22A173C73B000677C82 /* BSTSSlidingMenu */ = {
 			isa = PBXGroup;
 			children = (
-				A47BF22B173C73BC00677C82 /* BSTSlidingMenuViewController.h */,
-				A47BF22C173C73BC00677C82 /* BSTSlidingMenuViewController.m */,
+				8867DB0F173F29010055C4C4 /* BSTSlidingMenuViewController.h */,
+				8867DB10173F29010055C4C4 /* BSTSlidingMenuViewController.m */,
 			);
-			name = lib;
+			name = BSTSSlidingMenu;
+			path = ../BSTSlidingMenu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A47BF209173C73A000677C82 /* Demo */ = {
+		A47BF209173C73A000677C82 /* BSTSSlidingMenuDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A47BF227173C73A000677C82 /* Build configuration list for PBXNativeTarget "Demo" */;
+			buildConfigurationList = A47BF227173C73A000677C82 /* Build configuration list for PBXNativeTarget "BSTSSlidingMenuDemo" */;
 			buildPhases = (
 				A47BF206173C73A000677C82 /* Sources */,
 				A47BF207173C73A000677C82 /* Frameworks */,
@@ -161,9 +181,9 @@
 			);
 			dependencies = (
 			);
-			name = Demo;
+			name = BSTSSlidingMenuDemo;
 			productName = Demo;
-			productReference = A47BF20A173C73A000677C82 /* Demo.app */;
+			productReference = A47BF20A173C73A000677C82 /* BSTSSlidingMenuDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -176,7 +196,7 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Ben Thomas";
 			};
-			buildConfigurationList = A47BF205173C73A000677C82 /* Build configuration list for PBXProject "Demo" */;
+			buildConfigurationList = A47BF205173C73A000677C82 /* Build configuration list for PBXProject "BSTSSlidingMenuDemo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -188,7 +208,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A47BF209173C73A000677C82 /* Demo */,
+				A47BF209173C73A000677C82 /* BSTSSlidingMenuDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -212,15 +232,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A47BF21A173C73A000677C82 /* main.m in Sources */,
 				A47BF21E173C73A000677C82 /* BSTDemoAppDelegate.m in Sources */,
-				A47BF22D173C73BC00677C82 /* BSTSlidingMenuViewController.m in Sources */,
 				A47BF230173C73D800677C82 /* BSTDemoViewController.m in Sources */,
 				A47BF233173C74B300677C82 /* BSTSharingMenu.m in Sources */,
 				A457AEF4173D958800272CEF /* BSTMenuPinnedLeftTopVC.m in Sources */,
 				A457AEF7173D95A900272CEF /* BSTMenuPinnedRightTopVC.m in Sources */,
 				A457AEFA173D98DF00272CEF /* BSTMenuPinnedLeftBottomVC.m in Sources */,
 				A41AF728173EEEB9004D01B3 /* BSTMenuPinnedRightBottomVC.m in Sources */,
+				8867DB11173F29010055C4C4 /* BSTSlidingMenuViewController.m in Sources */,
+				8867DB16173F29BC0055C4C4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +320,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Demo/Demo-Prefix.pch";
 				INFOPLIST_FILE = "Demo/Demo-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BSTSSlidingMenuDemo;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -311,7 +331,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Demo/Demo-Prefix.pch";
 				INFOPLIST_FILE = "Demo/Demo-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BSTSSlidingMenuDemo;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -319,7 +339,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A47BF205173C73A000677C82 /* Build configuration list for PBXProject "Demo" */ = {
+		A47BF205173C73A000677C82 /* Build configuration list for PBXProject "BSTSSlidingMenuDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A47BF225173C73A000677C82 /* Debug */,
@@ -328,7 +348,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A47BF227173C73A000677C82 /* Build configuration list for PBXNativeTarget "Demo" */ = {
+		A47BF227173C73A000677C82 /* Build configuration list for PBXNativeTarget "BSTSSlidingMenuDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A47BF228173C73A000677C82 /* Debug */,
