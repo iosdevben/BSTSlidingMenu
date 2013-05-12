@@ -15,10 +15,7 @@ The menu can optionally be configured to be close automatically after a given pe
 
 Screenshots
 -----------
-|iphone_demo_1| |iphone_demo_2|
-
-.. |iphone_demo_1| image:: screenshots/1.png
-.. |iphone_demo_2| image:: screenshots/2.png
+!(screenshots/1.png) !(screenshots/2.png)
 
 
 Usage
