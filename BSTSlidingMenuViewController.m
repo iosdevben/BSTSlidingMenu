@@ -18,7 +18,7 @@
 @property (nonatomic, strong) NSMutableArray *rows;
 @property (nonatomic, strong) NSTimer *timer;
 
-@property (nonatomic, assign) id<BSTMenuDelegate> delegate;
+@property (nonatomic, assign) id<BSTSlidingMenuDelegate> delegate;
 
 @end
 
@@ -28,8 +28,8 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-      self.animationDelay = BSTMenuDefaultAnimationDelay;
-      self.animationDuration = BSTMenuDefaultAnimationDuration;
+      self.animationDelay = BSTSlidingMenuDefaultAnimationDelay;
+      self.animationDuration = BSTSlidingMenuDefaultAnimationDuration;
       
       self.buttonColor = [UIColor darkGrayColor];
       self.buttonActiveColor = [UIColor grayColor];
@@ -50,9 +50,9 @@
       
       self.headerBackgroundColor = [UIColor greenColor];
       
-      self.openingDirection = BSTMenuOpeningDirectionDown;
+      self.openingDirection = BSTSlidingMenuOpeningDirectionDown;
       
-      self.pinLocation = BSTMenuPinLocationLeft;
+      self.pinLocation = BSTSlidingMenuPinLocationLeft;
     
       self.rows = [NSMutableArray array];      
 
@@ -115,7 +115,7 @@
   CGRect buttonFrame = self.button.frame;
   buttonFrame.size = [self buttonSize];
   
-  if (self.pinLocation == BSTMenuPinLocationRight)
+  if (self.pinLocation == BSTSlidingMenuPinLocationRight)
     buttonFrame.origin.x = CGRectGetMaxX(self.view.bounds) - CGRectGetWidth(buttonFrame);
   
   self.button.frame = buttonFrame;
@@ -127,20 +127,20 @@
 
   CGRect menuFrame = self.menu.frame;
   menuFrame.size = CGSizeMake(menuWidth, menuHeight);
-  if (self.pinLocation == BSTMenuPinLocationRight)
+  if (self.pinLocation == BSTSlidingMenuPinLocationRight)
   {
     menuFrame.origin.x = CGRectGetMaxX(self.button.frame) - CGRectGetWidth(menuFrame);
   }
-  else if (self.pinLocation == BSTMenuPinLocationLeft)
+  else if (self.pinLocation == BSTSlidingMenuPinLocationLeft)
   {
     menuFrame.origin.x = 0;
   }
   
-  if (BSTMenuOpeningDirectionDown == self.openingDirection)
+  if (BSTSlidingMenuOpeningDirectionDown == self.openingDirection)
   {
     menuFrame.origin.y = CGRectGetMaxY(self.button.frame) - CGRectGetHeight(menuFrame);
   }
-  else if (BSTMenuOpeningDirectionUp == self.openingDirection)
+  else if (BSTSlidingMenuOpeningDirectionUp == self.openingDirection)
   {
     menuFrame.origin.y = CGRectGetMinY(self.button.frame);
     headerFrame.origin.y = CGRectGetMinY(self.button.frame);
@@ -192,17 +192,17 @@
   
   switch (self.openingDirection)
   {
-    case BSTMenuOpeningDirectionLeft:
+    case BSTSlidingMenuOpeningDirectionLeft:
     {
       menuFrame.origin.x = CGRectGetMinX(self.button.frame);
       break;
     }
-    case BSTMenuOpeningDirectionRight:
+    case BSTSlidingMenuOpeningDirectionRight:
     {
       menuFrame.origin.x = CGRectGetMaxX(self.button.frame) - CGRectGetWidth(menuFrame);
       break;
     }
-    case BSTMenuOpeningDirectionUp:
+    case BSTSlidingMenuOpeningDirectionUp:
     {
       menuFrame = self.menu.frame;
       menuFrame.origin.y = CGRectGetMinY(buttonFrame);
@@ -219,7 +219,7 @@
 
       break;
     }
-    case BSTMenuOpeningDirectionDown:
+    case BSTSlidingMenuOpeningDirectionDown:
     default:
     {
       viewFrame.size.height = [self buttonSize].height;
@@ -254,17 +254,17 @@
   
   switch (self.openingDirection)
   {
-    case BSTMenuOpeningDirectionLeft:
+    case BSTSlidingMenuOpeningDirectionLeft:
     {
       menuFrame.origin.x = CGRectGetMinX(self.button.frame) - CGRectGetWidth(menuFrame);
       break;
     }
-    case BSTMenuOpeningDirectionRight:
+    case BSTSlidingMenuOpeningDirectionRight:
     {
       menuFrame.origin.x = CGRectGetMaxX(self.button.frame);
       break;
     }
-    case BSTMenuOpeningDirectionUp:
+    case BSTSlidingMenuOpeningDirectionUp:
     {
       viewFrame.origin.y -= CGRectGetHeight(menuFrame);
       viewFrame.size.height = [self buttonSize].height + CGRectGetHeight(menuFrame);
@@ -282,7 +282,7 @@
       
       break;
     }
-    case BSTMenuOpeningDirectionDown:
+    case BSTSlidingMenuOpeningDirectionDown:
     default:
     {
       viewFrame.size.height = [self buttonSize].height + [self menuHeight];
@@ -316,7 +316,7 @@
   }
 }
 
-#pragma mark - BSTMenuDelegate methods
+#pragma mark - BSTSlidingMenuDelegate methods
 
 - (NSInteger)menuHeight
 {
