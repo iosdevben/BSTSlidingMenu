@@ -1,7 +1,7 @@
 //SDK & Device/Architecture
 
 SDKROOT = iphoneos
-IPHONEOS_DEPLOYMENT_TARGET = 5.0
+IPHONEOS_DEPLOYMENT_TARGET = 6.0
 
 TARGETED_DEVICE_FAMILY = 1,2
 ARCHS[sdk=iphoneos*] = armv7 armv7s
@@ -14,6 +14,9 @@ GCC_THUMB_SUPPORT = NO
 //Compiler settings
 GCC_VERSION = com.apple.compilers.llvm.clang.1_0
 GCC_C_LANGUAGE_STANDARD = gnu99
+
+CLANG_CXX_LANGUAGE_STANDARD = gnu++0x
+CLANG_CXX_LIBRARY = libc++
 
 // Optimise code by making more aggressive assumptions about whether pointers can point to the same objects as other pointers - (ping @orj)
 GCC_STRICT_ALIASING = YES
@@ -98,6 +101,11 @@ CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = NO
 CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES
 CLANG_WARN__ARC_BRIDGE_CAST_NONARC = YES
 CLANG_WARN__DUPLICATE_METHOD_MATCH = YES
+
+CLANG_WARN_INT_CONVERSION = YES
+CLANG_WARN_ENUM_CONVERSION = YES
+CLANG_WARN_EMPTY_BODY = YES
+CLANG_WARN_CONSTANT_CONVERSION = YES
 
 // Some of these settings duplicate those above, but -Wall -Wextra add more stuff too (some of which we are disabling below, ARGH!)
 // TODO: -Wundef should be turned on
