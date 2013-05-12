@@ -75,7 +75,6 @@
 		A47BF201173C73A000677C82 = {
 			isa = PBXGroup;
 			children = (
-				A47BF234173C81F000677C82 /* Social.framework */,
 				A47BF22A173C73B000677C82 /* lib */,
 				A47BF213173C73A000677C82 /* Demo */,
 				A47BF20C173C73A000677C82 /* Frameworks */,
@@ -94,6 +93,7 @@
 		A47BF20C173C73A000677C82 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A47BF234173C81F000677C82 /* Social.framework */,
 				A47BF20D173C73A000677C82 /* UIKit.framework */,
 				A47BF20F173C73A000677C82 /* Foundation.framework */,
 				A47BF211173C73A000677C82 /* CoreGraphics.framework */,
