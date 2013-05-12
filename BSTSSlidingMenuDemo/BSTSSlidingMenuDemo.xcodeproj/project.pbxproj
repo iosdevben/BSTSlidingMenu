@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8867DB11173F29010055C4C4 /* BSTSlidingMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8867DB10173F29010055C4C4 /* BSTSlidingMenuViewController.m */; };
 		8867DB16173F29BC0055C4C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8867DB15173F29BC0055C4C4 /* main.m */; };
+		88B188AB173F335A0047FC44 /* LICENCE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 88B188AA173F335A0047FC44 /* LICENCE.txt */; };
 		A41AF728173EEEB9004D01B3 /* BSTMenuPinnedRightBottomVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A41AF727173EEEB9004D01B3 /* BSTMenuPinnedRightBottomVC.m */; };
 		A457AEF4173D958800272CEF /* BSTMenuPinnedLeftTopVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A457AEF3173D958800272CEF /* BSTMenuPinnedLeftTopVC.m */; };
 		A457AEF7173D95A900272CEF /* BSTMenuPinnedRightTopVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A457AEF6173D95A900272CEF /* BSTMenuPinnedRightTopVC.m */; };
@@ -32,6 +33,7 @@
 		8867DB19173F2ADA0055C4C4 /* Shared.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
 		8867DB1D173F2B830055C4C4 /* Demo-App.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Demo-App.xcconfig"; sourceTree = "<group>"; };
 		88B188A8173F2C6A0047FC44 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		88B188AA173F335A0047FC44 /* LICENCE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENCE.txt; path = ../LICENCE.txt; sourceTree = "<group>"; };
 		A41AF726173EEEB9004D01B3 /* BSTMenuPinnedRightBottomVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTMenuPinnedRightBottomVC.h; sourceTree = "<group>"; };
 		A41AF727173EEEB9004D01B3 /* BSTMenuPinnedRightBottomVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTMenuPinnedRightBottomVC.m; sourceTree = "<group>"; };
 		A457AEF2173D958800272CEF /* BSTMenuPinnedLeftTopVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTMenuPinnedLeftTopVC.h; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 		A47BF201173C73A000677C82 = {
 			isa = PBXGroup;
 			children = (
+				88B188AA173F335A0047FC44 /* LICENCE.txt */,
 				88B188A8173F2C6A0047FC44 /* README.md */,
 				A47BF22A173C73B000677C82 /* BSTSSlidingMenu */,
 				8867DB13173F29890055C4C4 /* BSTSSlidingMenuDemo */,
@@ -224,6 +227,7 @@
 				A47BF220173C73A000677C82 /* Default.png in Resources */,
 				A47BF222173C73A000677C82 /* Default@2x.png in Resources */,
 				A47BF224173C73A000677C82 /* Default-568h@2x.png in Resources */,
+				88B188AB173F335A0047FC44 /* LICENCE.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
