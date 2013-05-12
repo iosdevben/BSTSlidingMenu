@@ -15,7 +15,8 @@ The menu can optionally be configured to be close automatically after a given pe
 
 Screenshots
 -----------
-!(https://lh6.googleusercontent.com/-4-HeqUOxjpA/UY8BBbHt59I/AAAAAAAAC7o/b6yOGQYNuf8/w165-h306-p-o/1.png) !(https://lh4.googleusercontent.com/-jWsM0l1ds2Y/UY8BB1MxkWI/AAAAAAAAC7s/eaqS5sGbOYc/w165-h306-p-o/2.png)
+![alt text](https://lh6.googleusercontent.com/-4-HeqUOxjpA/UY8BBbHt59I/AAAAAAAAC7o/b6yOGQYNuf8/w165-h306-p-o/1.png "menus closed")
+![alt text](https://lh4.googleusercontent.com/-jWsM0l1ds2Y/UY8BB1MxkWI/AAAAAAAAC7s/eaqS5sGbOYc/w165-h306-p-o/2.png "menus opened")
 
 
 Usage
