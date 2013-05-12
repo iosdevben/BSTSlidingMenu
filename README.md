@@ -15,7 +15,7 @@ The menu can optionally be configured to be close automatically after a given pe
 
 Screenshots
 -----------
-!(screenshots/1.png) !(screenshots/2.png)
+(./screenshots/1.png) (./screenshots/2.png)
 
 
 Usage
