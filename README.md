@@ -11,7 +11,7 @@ The menu can optionally be configured to be close automatically after a given pe
 
 *Used in apps:*
 
-  http://appstore.com/HarkenForiPhone
+&nbsp;&nbsp;http://appstore.com/HarkenForiPhone
 
 Usage
 -----
