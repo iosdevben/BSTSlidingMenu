@@ -19,7 +19,7 @@
   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
   if (self) {
     // Custom initialization
-    self.openingDirection = BSTMenuOpeningDirectionUp;
+    self.openingDirection = BSTSlidingMenuOpeningDirectionUp;
   }
   return self;
 }

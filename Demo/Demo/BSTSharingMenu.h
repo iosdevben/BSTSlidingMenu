@@ -10,6 +10,6 @@
 
 #import "BSTSlidingMenuViewController.h"
 
-@interface BSTSharingMenu : BSTSlidingMenuViewController<BSTMenuDelegate, UIAlertViewDelegate>
+@interface BSTSharingMenu : BSTSlidingMenuViewController<BSTSlidingMenuDelegate, UIAlertViewDelegate>
 
 @end

@@ -19,8 +19,8 @@
   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
   if (self) {
     // Custom initialization
-    self.pinLocation = BSTMenuPinLocationRight;
-    self.openingDirection = BSTMenuOpeningDirectionUp;
+    self.pinLocation = BSTSlidingMenuPinLocationRight;
+    self.openingDirection = BSTSlidingMenuOpeningDirectionUp;
   }
   return self;
 }
